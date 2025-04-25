@@ -1,3 +1,5 @@
+const { title } = require("process");
+
 const data = [
   {
     id: 1,
@@ -175,5 +177,9 @@ console.log(newGenres); //as we can see "action", "romantic " has been added ins
 
 //spread operator for objects
 const updatedbook = book;
-updateBook = {...book, realseDate: 3-3-2022, pages: 444 }
-updateBook; // releasDate add bhako cha bhane pages chai update bhako cha
+updatedbook = {...book, realseDate: 3-3-2022, pages: 444 }
+updatedbook; // releasDate add bhako cha bhane pages chai update bhako cha
+
+const summary = `${title} is a book written by a ${author}, it was published in ${publicationDate}`;
+summary;
+
