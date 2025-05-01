@@ -1,5 +1,3 @@
-const { title } = require("process");
-
 const data = [
   {
     id: 1,
@@ -156,8 +154,8 @@ books; // sabai book haru lai get garcha jun hamro data bhanne obj ma cha
 const book = getBook(1); 
 book; // yo variable ma chai tyo index ko matra huncha jun hamle call gareko or input diyeko cham
 
-const {title, author, genres} = book;// ehha chai title author genres haru ko data chai unpack gareko 
-console.log(title, author, genres);
+const {title, author, genres, publicationDate, pages, hasMovieAdaptation} = book;// ehha chai title author genres haru ko data chai unpack gareko 
+// console.log(title, author, genres);
 
 const [firstGenre, secondGenre] = genres; //yo chai hamro genres bhako index ma vako value lai name deko 
 console.log(title, author, firstGenre, secondGenre);
