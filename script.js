@@ -249,3 +249,37 @@ function getTotalReview(book){
 }
 
 console.log(getTotalReview(book))
+
+
+//-------------Array Map() method----------------------------
+// yo method chai js ma array method hoo jasle naya array create garcha result ko original array bata
+// map() does not change the original array.
+// It always returns a new array.
+// It is often used for transforming an array (e.g., converting values, extracting properties).
+
+const M = [1, 2, 3 ,4, 5].map((el)=> el*2)
+M;
+
+const titles = books.map((book)=>book.title)
+title;
+
+const limitedData = books.map((book)=>({
+  ID :book.id,
+  Title : book.title,
+  Author : book.author,
+  reviewsCount: getTotalReview(book)
+}))
+
+console.log(limitedData);
+
+//-------------------------filter method-------------------------------------------------------//
+// naam nai bata thaha huncha filter garna use huncha tara k filter garne ta??? kunai pani condition check garera tesbata element haru naya array rakhana help garcha, condition chai check garaunu paryoo 
+
+
+const longBook = books
+  .filter(book => book.pages > 400)
+  .filter(book => book.hasMovieAdaptation);
+longBook;
+
+const adventureBook = books.filter(book => book.genres.includes("adventure")).map(book=> book.title)
+adventureBook
