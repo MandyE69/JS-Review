@@ -303,3 +303,25 @@ arr;
 const sortedPageBook = books.slice().sort((a,b)=> a.pages - b.pages)
 sortedPageBook;
 
+//---------------------------------Working with immutable arrays--------------------------------------------------------//
+
+const newBook = {
+    id:1,
+    title: 'Harry Potter in the void',
+    author: 'J.K. Rowling'
+}
+
+//1. add a book
+const AddBook = [...books, newBook]
+AddBook;
+
+//2. delete book
+const deleteBook = books.filter((book)=> book.id!== 3)
+deleteBook
+
+//3. update book
+const updateBook = books.map(
+  (book)=>
+   book.id === 1 ? {...book, pages:1}: book
+);
+updateBook;
