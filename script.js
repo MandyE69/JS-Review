@@ -281,5 +281,25 @@ const longBook = books
   .filter(book => book.hasMovieAdaptation);
 longBook;
 
-const adventureBook = books.filter(book => book.genres.includes("adventure")).map(book=> book.title)
+const adventureBook = books
+  .filter(book => book.genres.includes("adventure"))
+  .map(book=> book.title)
 adventureBook
+
+//-----------------------------------------reduce method ------------------------------------------------//
+//yo chai array lai liyera kunai pani single value ma change garna ko lagi or obtain garna ko lagi
+
+const pageAllBook = books.reduce((sum,book)=> sum + book.pages, 0);
+pageAllBook;
+
+//---------------------------------------sort method ----------------------------------------------//
+// yo method sort garna use huncha array ko value tara eesma filter map jasto new array bandaina tei array mai huncha jun lai mutable bhanicha tesaile hami tyo array ko copy banayera garcham using slice()
+
+const arr = [4, 3, 5, 6 ,2, 1]
+const sorted = arr.slice().sort((a,b)=> a - b ) // slice use garena bhane chai original array nai change garcha tesaile copy banako 
+sorted;
+arr;
+
+const sortedPageBook = books.slice().sort((a,b)=> a.pages - b.pages)
+sortedPageBook;
+
