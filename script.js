@@ -325,3 +325,26 @@ const updateBook = books.map(
    book.id === 1 ? {...book, pages:1}: book
 );
 updateBook;
+
+//---------------------------------asynchronous js: promises------------------------------------------//
+// javascript afai ma euta synchronous hoo bhaneko matlab continously code run huncha line by line tara jaba hami kunai pani api/data fetch garchum teti bela chai tyo data recive huna kei time lagcha tara js ta k ho synchronous arko line mai gaihalcha tyo data auun jel  kuradaina tesko lagi chai hami promise use garcham jasle data receive bhayepachi tei line lai feri execute garcha
+
+fetch('https://jsonplaceholder.typicode.com/todos')// data fetch gareko jun lai kei time lagcha
+  .then((res)=>res.json()) //eessle data receive bhaye pachi response dincha
+  .then(data=>console.log(data)) //tespachi data ma tyo value store huncha
+ 
+console.log('yo pahila'); //eedi hamle console ma heryoo bhane yo line pahila execute bhako cha
+
+//----------------------------------asynchronous js: async/await--------------------------------------------//
+//async/await mathi jastai same kaam gara tara more clean ra readable code huncha
+
+async function getTodos(){
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const data = await res.json();
+  console.log(data)
+}
+
+getTodos();// js le yo run line garcha ni next line jancha 
+
+console.log('hello')// yo first execute huncha than getTodo kina bhane js le kasaile kuradaina
+
