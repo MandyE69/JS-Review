@@ -348,3 +348,4 @@ getTodos();// js le yo run line garcha ni next line jancha
 
 console.log('hello')// yo first execute huncha than getTodo kina bhane js le kasaile kuradaina
 
+//-------------------------------------------------THE END--------------------------------------------------------------------------//
